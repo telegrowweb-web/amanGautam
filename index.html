@@ -1,637 +1,192 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aman Gautam – Swing Trading | Investing is Freedom | 9,630 Subscribers</title>
-  <meta name="description" content="Join Aman Gautam on Telegram — 9,630 subscribers. Swing Trading expert. Investing is freedom, Banking is slavery. Investor cum Trader. Join now free!"/>
-  <meta name="keywords" content="Aman Gautam, Swing Trading, Stock Market, Investing, Freedom, Telegram Trading, Market Analysis"/>
-  <meta name="author" content="Aman Gautam"/>
-  <meta name="robots" content="index, follow"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://telegram.openinapp.co/traan"/>
-  <meta property="og:title" content="Aman Gautam – Swing Trading | Investing is Freedom"/>
-  <meta property="og:description" content="9,630 subscribers. Swing Trading expert. Investing is freedom. Join free!"/>
-  <meta property="og:image" content="https://telegram.openinapp.co/traan"/>
-  <link rel="canonical" href="https://telegram.openinapp.co/traan"/>
-
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --t1:   #0d9488;
-      --t2:   #14b8a6;
-      --t3:   #5eead4;
-      --gold: #f0c040;
-      --g2:   #d4a017;
-      --grn:  #22c55e;
-      --red:  #f43f5e;
-      --dark: #030d0c;
-      --bdr:  rgba(20,184,166,0.18);
-      --txt:  #e0fdf8;
-      --mut:  #2d6b64;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-    html, body {
-      height: 100%; width: 100%;
-      background: var(--dark);
-      font-family: 'DM Sans', sans-serif;
-      color: var(--txt);
-      overflow: hidden;
+    body {
+      background-color: #ffffff;
+      color: #111;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 15px;
     }
 
-    /* ── BG RADIALS ── */
-    .bg {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse at 18% 12%,  rgba(13,148,136,0.18) 0%, transparent 52%),
-        radial-gradient(ellipse at 82% 88%,  rgba(20,184,166,0.12) 0%, transparent 52%),
-        radial-gradient(ellipse at 55% 48%,  rgba(5,60,55,0.12)    0%, transparent 58%);
-    }
-
-    /* ── FINE DOT TEXTURE ── */
-    .texture {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image:
-        radial-gradient(circle, rgba(20,184,166,0.09) 1.5px, transparent 1.5px);
-      background-size: 22px 22px;
-      animation: texDrift 28s linear infinite;
-    }
-    @keyframes texDrift {
-      0%   { background-position: 0 0; }
-      100% { background-position: 22px 22px; }
-    }
-
-    /* ── DIAGONAL LINES ── */
-    .diag {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent, transparent 36px,
-        rgba(20,184,166,0.030) 36px, rgba(20,184,166,0.030) 37px
-      );
-    }
-
-    /* ── SCAN LINE ── */
-    .scan {
-      position: fixed; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(20,184,166,0.4), transparent);
-      z-index: 0; pointer-events: none;
-      animation: scanMove 14s linear infinite;
-    }
-    @keyframes scanMove {
-      0%  { top: -2px; opacity: 0; }
-      5%  { opacity: 1; }
-      95% { opacity: .2; }
-      100%{ top: 100%; opacity: 0; }
-    }
-
-    /* ── ORBS ── */
-    .orb { position: fixed; border-radius: 50%; filter: blur(88px); z-index: 0; pointer-events: none; }
-    .orb1 { width: 300px; height: 300px; background: rgba(13,148,136,0.14);  top: -80px;   right: -60px; animation: orbF 12s ease-in-out infinite alternate; }
-    .orb2 { width: 220px; height: 220px; background: rgba(20,184,166,0.10);  bottom: -60px; left: -50px; animation: orbF 15s ease-in-out infinite alternate-reverse; }
-    .orb3 { width: 140px; height: 140px; background: rgba(240,192,64,0.06);  top: 42%; left: -35px;     animation: orbF 9s ease-in-out infinite alternate; }
-    @keyframes orbF { 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(14px,18px) scale(1.08)} }
-
-    /* ── PARTICLES ── */
-    .particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-    .p { position: absolute; border-radius: 50%; animation: pUp linear infinite; opacity: 0; }
-    .p1{width:2px;height:2px;background:var(--t2); left:8%;  top:22%;animation-duration:8s; animation-delay:0s;}
-    .p2{width:3px;height:3px;background:var(--gold);left:22%; top:68%;animation-duration:10s;animation-delay:1.5s;}
-    .p3{width:2px;height:2px;background:var(--t3); left:38%; top:35%;animation-duration:9s; animation-delay:3s;}
-    .p4{width:2px;height:2px;background:var(--t2); left:55%; top:78%;animation-duration:11s;animation-delay:.8s;}
-    .p5{width:3px;height:3px;background:var(--gold);left:68%; top:20%;animation-duration:8s; animation-delay:2s;}
-    .p6{width:2px;height:2px;background:var(--t3); left:80%; top:55%;animation-duration:10s;animation-delay:4s;}
-    .p7{width:2px;height:2px;background:var(--t2); left:90%; top:30%;animation-duration:9s; animation-delay:1s;}
-    @keyframes pUp {
-      0%  { opacity:0; transform:translateY(0) scale(.6); }
-      20% { opacity:.8; }
-      80% { opacity:.3; }
-      100%{ opacity:0; transform:translateY(-65px) scale(1.3); }
-    }
-
-    /* ════════════════════════════════════
-       PAGE — strict one screen
-    ════════════════════════════════════ */
-    .page {
-      position: relative; z-index: 1;
-      height: 100vh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      padding: 22px 24px 28px;
-      overflow: hidden; gap: 0;
-    }
-
-    /* ── TOP QUOTE STRIP ── */
-    .quote-strip {
-      display: flex; align-items: center; gap: 8px;
-      margin-bottom: 14px;
-      text-decoration: none;
-      animation: fadeUp .5s ease both;
-      transition: opacity .2s;
-    }
-    .quote-strip:hover { opacity: .8; }
-    .qs-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--t2), transparent); max-width: 46px; }
-    .qs-txt {
-      font-family: 'Italiana', serif;
-      font-size: 11px; font-weight: 400;
-      letter-spacing: .16em; color: var(--t3);
-      font-style: italic; white-space: nowrap; opacity: .85;
-    }
-
-    /* ── LOGO ── */
-    .logo-link { text-decoration: none; display: block; }
-    .logo-section {
-      display: flex; flex-direction: column; align-items: center;
-      animation: fadeUp .5s .06s ease both;
-    }
-    .logo-outer { position: relative; width: 108px; height: 108px; }
-
-    /* Clean elegant ring */
-    .lr1 {
-      position: absolute; inset: -5px; border-radius: 50%;
-      border: 2px solid transparent;
-      background:
-        linear-gradient(var(--dark), var(--dark)) padding-box,
-        conic-gradient(var(--t1) 0%, var(--t3) 30%, var(--gold) 55%, var(--t2) 80%, var(--t1) 100%) border-box;
-      animation: rSpin 7s linear infinite;
-    }
-    .lr2 {
-      position: absolute; inset: -11px; border-radius: 50%;
-      border: 1px solid rgba(20,184,166,0.16);
-      animation: rSpin 12s linear infinite reverse;
-    }
-    @keyframes rSpin { to { transform:rotate(360deg); } }
-
-    .l-img {
-      position: absolute; inset: 0; border-radius: 50%;
-      overflow: hidden; display: flex; align-items: center; justify-content: center;
-      background: #fff;
-    }
-    .l-img img { width: 100%; height: 100%; object-fit: cover; }
-
-    /* Corner dots */
-    .ldot { position: absolute; width: 6px; height: 6px; border-radius: 50%; }
-    .ld1 { top:-2px;    left:50%;  transform:translateX(-50%); background:var(--t2);  box-shadow:0 0 8px var(--t1); }
-    .ld2 { bottom:-2px; left:50%;  transform:translateX(-50%); background:var(--t2);  box-shadow:0 0 8px var(--t1); }
-    .ld3 { left:-2px;   top:50%;   transform:translateY(-50%); background:var(--gold);box-shadow:0 0 8px var(--g2); }
-    .ld4 { right:-2px;  top:50%;   transform:translateY(-50%); background:var(--gold);box-shadow:0 0 8px var(--g2); }
-
-    /* Name below logo */
-    .name-row {
-      margin-top: 12px;
-      display: flex; align-items: center; gap: 7px;
-    }
-    .nr-line { width: 24px; height: 1px; background: linear-gradient(90deg, transparent, var(--t2)); }
-    .nr-line.r { background: linear-gradient(90deg, var(--t2), transparent); }
-    .nr-txt { font-size: 9.5px; font-weight: 700; letter-spacing: .22em; color: var(--mut); text-transform: uppercase; }
-
-    /* ── TITLE ── */
-    .title-link { text-decoration: none; display: block; width: 100%; }
-    .title-wrap {
-      text-align: center; margin-top: 14px;
-      animation: fadeUp .5s .12s ease both;
-    }
-    .pre-lbl {
-      font-size: 8.5px; font-weight: 600;
-      letter-spacing: .38em; color: var(--mut);
-      text-transform: uppercase; margin-bottom: 4px;
-    }
     h1 {
-      font-family: 'Italiana', serif;
-      font-size: clamp(28px, 7vw, 54px);
-      font-weight: 400; letter-spacing: .06em; line-height: 1;
+      color: #0077ff;
+      font-size: 22px;
+      margin-top: 35px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 15px;
+      margin: 8px 0;
+    }
+
+    .timer {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #ff6600;
+    }
+
+    .profile img {
+      width: 160px;
+      border-radius: 50%;
+      margin: 18px 0;
+      border: 3px solid #0077ff;
+      box-shadow: 0 0 15px rgba(0, 119, 255, 0.3);
+    }
+
+    .view-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(45deg, #0077ff, #00c6ff);
       color: #fff;
-      text-shadow: 0 0 36px rgba(20,184,166,.28);
-    }
-    h1 .a { color: var(--t3); text-shadow: 0 0 20px rgba(94,234,212,.8); }
-    h1 .g { color: var(--gold); text-shadow: 0 0 18px rgba(240,192,64,.7); }
-    .tagline {
-      margin-top: 7px;
-      font-size: clamp(10.5px, 2.3vw, 13px);
-      color: var(--mut); font-weight: 400;
-      letter-spacing: .03em; line-height: 1.6;
-    }
-    .tagline .hi  { color: var(--t3);  font-weight: 700; }
-    .tagline .hi2 { color: var(--gold); font-weight: 700; }
-
-    /* ── INVESTING QUOTE BANNER ── */
-    .quote-banner {
-      text-decoration: none; display: block;
-      width: 100%; max-width: 340px;
-      margin-top: 14px;
-      animation: fadeUp .5s .20s ease both;
-    }
-    .qb-inner {
-      display: flex; align-items: center; gap: 10px;
-      background: rgba(20,184,166,.07);
-      border: 1px solid var(--bdr);
-      border-radius: 10px; padding: 10px 16px;
-      transition: border-color .2s, background .2s;
-    }
-    .quote-banner:hover .qb-inner { border-color: var(--t2); background: rgba(20,184,166,.12); }
-    .qb-icon { font-size: 22px; flex-shrink: 0; }
-    .qb-txt { text-align: left; }
-    .qb-txt b { display: block; font-size: 12px; font-weight: 800; color: #fff; letter-spacing: .04em; }
-    .qb-txt span { font-size: 10px; color: var(--mut); font-weight: 500; font-style: italic; }
-
-    /* ── STATS ROW ── */
-    .stats-link {
-      text-decoration: none; display: block;
-      width: 100%; max-width: 340px;
-      margin-top: 13px;
-      animation: fadeUp .5s .28s ease both;
-    }
-    .stats-row {
-      display: flex; align-items: stretch;
-      background: rgba(20,184,166,.06);
-      border: 1px solid var(--bdr);
-      border-radius: 11px; overflow: hidden;
-      transition: border-color .2s;
-    }
-    .stats-link:hover .stats-row { border-color: var(--t2); }
-    .sc {
-      flex: 1; padding: 10px 6px; text-align: center;
-      position: relative;
-    }
-    .sc + .sc::before {
-      content: ''; position: absolute; left: 0; top: 16%; bottom: 16%;
-      width: 1px; background: var(--bdr);
-    }
-    .sc-v {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 20px; font-weight: 800;
-      color: var(--t2); letter-spacing: .04em; line-height: 1;
-    }
-    .sc-v.g { color: var(--gold); }
-    .sc-v.w { color: #fff; }
-    .sc-l { font-size: 8px; font-weight: 700; color: var(--mut); text-transform: uppercase; letter-spacing: .1em; margin-top: 2px; }
-
-    /* ── FEATURE PILLS ── */
-    .pills {
-      display: flex; flex-wrap: wrap; gap: 6px;
-      justify-content: center; width: 100%;
-      margin-top: 12px;
-      animation: fadeUp .5s .36s ease both;
-    }
-    .pill {
+      border: none;
+      border-radius: 30px;
       text-decoration: none;
-      display: flex; align-items: center; gap: 5px;
-      background: rgba(20,184,166,.06);
-      border: 1px solid var(--bdr);
-      border-radius: 7px; padding: 6px 12px;
-      font-size: 10.5px; font-weight: 700;
-      color: var(--txt); letter-spacing: .03em;
-      transition: background .2s, border-color .2s;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+      margin-top: 10px;
     }
-    .pill:hover { background: rgba(20,184,166,.14); border-color: var(--t2); }
-    .pd { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
-    .pd.t { background: var(--t3); box-shadow: 0 0 6px var(--t2); }
-    .pd.g { background: var(--gold); box-shadow: 0 0 6px var(--g2); }
 
-    /* ── LIVE TICKER ── */
-    .ticker-row {
-      display: flex; gap: 6px; align-items: center;
-      margin-top: 12px;
-      animation: fadeUp .5s .44s ease both;
+    .view-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 119, 255, 0.4);
     }
-    .ti {
+
+    h2 {
+      color: #0077ff;
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    .footer {
+      font-size: 13px;
+      margin-top: 15px;
+      opacity: 0.8;
+    }
+
+    .disclaimer {
+      background: #f7f7f7;
+      color: #555;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 10px 6px 10px;
+      border-top: 1px solid #ddd;
+      margin-top: 15px;
+      line-height: 1.4;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .footer-links {
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 0 10px 0;
+      background: #f7f7f7;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .footer-links a {
+      color: #0077ff;
       text-decoration: none;
-      display: flex; align-items: center; gap: 5px;
-      background: rgba(20,184,166,.05);
-      border: 1px solid rgba(20,184,166,.15);
-      border-radius: 6px; padding: 5px 9px;
-      font-size: 9.5px; font-weight: 700; letter-spacing: .04em;
-      transition: border-color .2s;
+      transition: 0.3s;
+      white-space: nowrap;
     }
-    .ti:hover { border-color: var(--t2); }
-    .tdot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; animation: tdBlink 1.3s ease-in-out infinite; }
-    .tdot.g { background: var(--grn);  box-shadow: 0 0 6px var(--grn); }
-    .tdot.r { background: var(--red);  box-shadow: 0 0 6px var(--red); }
-    .tv.g { color: var(--grn); }
-    .tv.r { color: var(--red); }
-    .tl { color: var(--mut); }
-    @keyframes tdBlink { 0%,100%{opacity:1} 50%{opacity:.25} }
 
-    /* ── DISCLAIMER ── */
-    .disc {
-      text-decoration: none; display: block;
-      width: 100%; max-width: 340px;
-      margin-top: 11px;
-      animation: fadeUp .5s .50s ease both;
+    .footer-links span {
+      color: #0077ff;
+      font-weight: 500;
+      margin: 0 2px;
     }
-    .disc-inner {
-      background: rgba(244,63,94,.05);
-      border: 1px solid rgba(244,63,94,.18);
-      border-radius: 8px; padding: 7px 13px;
-      font-size: 9.5px; color: rgba(255,180,180,.65);
-      text-align: center; line-height: 1.5; font-weight: 500;
-      transition: border-color .2s;
-    }
-    .disc:hover .disc-inner { border-color: rgba(244,63,94,.35); }
 
-    /* ── CTA BUTTON ── */
-    .cta-wrap {
-      width: 100%; max-width: 340px;
-      margin-top: 13px;
-      animation: fadeUp .5s .56s ease both;
-    }
-    .btn {
-      position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      width: 100%; padding: 15px 28px; border-radius: 10px;
-      background: linear-gradient(135deg, var(--t1), var(--t2), var(--t3));
-      background-size: 200% auto;
-      color: #020d0c;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 800; font-size: 14px; letter-spacing: .1em;
-      text-transform: uppercase; text-decoration: none;
-      border: none; cursor: pointer;
-      box-shadow: 0 6px 26px rgba(20,184,166,.38);
-      animation: btnPulse 2.3s ease-in-out infinite, gSlide 3s linear infinite;
-    }
-    .btn::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
-      transform: translateX(-100%);
-      animation: shimmer 2.4s ease-in-out infinite;
-    }
-    @keyframes shimmer { 0%{transform:translateX(-100%)} 55%,100%{transform:translateX(100%)} }
-    @keyframes btnPulse {
-      0%,100% { transform:scale(1);    box-shadow:0 6px 26px rgba(20,184,166,.38); }
-      50%      { transform:scale(1.04); box-shadow:0 10px 38px rgba(20,184,166,.62); }
-    }
-    @keyframes gSlide { 0%{background-position:0% center} 100%{background-position:200% center} }
-    .btn-inner { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; }
-    .tg { width: 18px; height: 18px; flex-shrink: 0; }
-    .tg path { fill: #020d0c; }
-
-    /* Credit */
     .credit {
-      position: fixed; bottom: 9px; left: 0; right: 0;
-      text-align: center; font-size: 11px;
-      color: var(--mut); z-index: 100; letter-spacing: .03em;
-    }
-    .credit a { color: var(--t2); text-decoration: none; font-weight: 700; }
-    .credit a:hover { text-decoration: underline; }
-
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(12px); }
-      to   { opacity:1; transform:translateY(0); }
+      text-align: center;
+      font-size: 13px;
+      margin-top: 10px;
+      opacity: 0.8;
+      color: #555;
     }
 
-    /* ════════════════════════════════════
-       PHONE ≤ 480px — bigger texture, gaps
-    ════════════════════════════════════ */
-    @media (max-width: 480px) {
-      html, body { overflow: hidden; }
-
-      .page {
-        padding: 14px 18px 26px;
-        justify-content: center;
-        gap: 0;
-      }
-
-      /* Quote strip */
-      .quote-strip { margin-bottom: 12px; }
-      .qs-txt { font-size: 10px; letter-spacing: .14em; }
-      .qs-line { max-width: 34px; }
-
-      /* Logo — BIGGER on phone */
-      .logo-outer { width: 104px; height: 104px; }
-      .name-row { margin-top: 11px; }
-      .nr-txt { font-size: 9px; letter-spacing: .18em; }
-
-      /* Title */
-      .title-wrap { margin-top: 13px; }
-      .pre-lbl { font-size: 7px; letter-spacing: .26em; margin-bottom: 4px; }
-      h1 { font-size: clamp(26px, 7vw, 33px); }
-      .tagline { font-size: 10.5px; margin-top: 6px; line-height: 1.58; }
-
-      /* Quote banner */
-      .quote-banner { margin-top: 12px; max-width: 100%; }
-      .qb-inner { padding: 9px 14px; gap: 9px; border-radius: 9px; }
-      .qb-icon { font-size: 20px; }
-      .qb-txt b { font-size: 11.5px; }
-      .qb-txt span { font-size: 9.5px; }
-
-      /* Stats */
-      .stats-link { margin-top: 12px; max-width: 100%; }
-      .sc { padding: 9px 5px; }
-      .sc-v { font-size: 18px; }
-      .sc-l { font-size: 7.5px; }
-
-      /* Pills */
-      .pills { margin-top: 11px; gap: 6px; }
-      .pill { font-size: 10px; padding: 6px 10px; border-radius: 6px; }
-
-      /* Ticker */
-      .ticker-row { margin-top: 11px; gap: 5px; }
-      .ti { font-size: 9.5px; padding: 5px 8px; }
-
-      /* Disclaimer */
-      .disc { margin-top: 10px; max-width: 100%; }
-      .disc-inner { font-size: 9px; padding: 6px 11px; }
-
-      /* Button */
-      .cta-wrap { margin-top: 12px; max-width: 100%; padding: 0 2px; }
-      .btn { font-size: 13.5px; padding: 14px 18px; letter-spacing: .09em; border-radius: 10px; }
-
-      /* BIGGER texture on phone */
-      .texture {
-        background-image: radial-gradient(circle, rgba(20,184,166,0.13) 1.5px, transparent 1.5px);
-        background-size: 17px 17px;
-      }
-      .diag {
-        background-image: repeating-linear-gradient(
-          45deg,
-          transparent, transparent 24px,
-          rgba(20,184,166,0.052) 24px, rgba(20,184,166,0.052) 25px
-        );
-      }
-
-      .credit { font-size: 10px; bottom: 7px; }
-    }
-
-    /* Very small phones */
-    @media (max-width: 370px) {
-      .logo-outer { width: 88px; height: 88px; }
-      h1 { font-size: 24px; }
-      .sc-v { font-size: 16px; }
-      .pill { font-size: 9.5px; padding: 5px 9px; }
-      .qb-txt b { font-size: 11px; }
-      .btn { font-size: 12.5px; padding: 13px 14px; }
-      .ticker-row { margin-top: 9px; }
-      .pills { margin-top: 9px; }
-      .stats-link { margin-top: 10px; }
-      .quote-banner { margin-top: 10px; }
-      .title-wrap { margin-top: 11px; }
-      .quote-strip { margin-bottom: 10px; }
-      .disc { margin-top: 8px; }
-      .cta-wrap { margin-top: 11px; }
-    }
-
-    /* ════════════════════════════════════
-       LAPTOP ≥ 768px
-    ════════════════════════════════════ */
-    @media (min-width: 768px) {
-      .page { padding: 22px 36px 28px; }
-
-      .quote-strip { margin-bottom: 16px; }
-      .qs-txt { font-size: 12px; letter-spacing: .18em; }
-      .qs-line { max-width: 56px; }
-
-      .logo-outer { width: 118px; height: 118px; }
-      .name-row { margin-top: 14px; }
-      .nr-txt { font-size: 10.5px; letter-spacing: .24em; }
-
-      .title-wrap { margin-top: 16px; }
-      .pre-lbl { font-size: 9px; letter-spacing: .38em; margin-bottom: 5px; }
-      h1 { font-size: 50px; }
-      .tagline { font-size: 13px; margin-top: 7px; }
-
-      .quote-banner { max-width: 420px; margin-top: 16px; }
-      .qb-inner { padding: 12px 20px; border-radius: 12px; }
-      .qb-icon { font-size: 26px; }
-      .qb-txt b { font-size: 14px; }
-      .qb-txt span { font-size: 11px; }
-
-      .stats-link { max-width: 420px; margin-top: 15px; }
-      .sc { padding: 12px 8px; }
-      .sc-v { font-size: 24px; }
-      .sc-l { font-size: 9px; margin-top: 3px; }
-
-      .pills { max-width: 420px; margin-top: 14px; gap: 8px; }
-      .pill { font-size: 11px; padding: 7px 14px; }
-
-      .ticker-row { margin-top: 14px; gap: 9px; }
-      .ti { font-size: 10.5px; padding: 6px 12px; }
-
-      .disc { max-width: 420px; margin-top: 13px; }
-      .disc-inner { font-size: 10.5px; padding: 8px 16px; }
-
-      .cta-wrap { max-width: 420px; margin-top: 15px; }
-      .btn { font-size: 15px; padding: 16px 34px; letter-spacing: .1em; border-radius: 12px; }
-    }
-
-    @media (min-width: 1200px) {
-      .logo-outer { width: 132px; height: 132px; }
-      h1 { font-size: 58px; }
-      .quote-banner, .stats-link, .pills, .disc, .cta-wrap { max-width: 480px; }
+    .credit a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
+
+
+
 <body>
+  <main>
+    <h1>Aman Gautam
+</h1>
+    <p>📈 Learn Strategies. Master the Market. 💡</p>
 
-  <div class="bg"></div>
-  <div class="texture"></div>
-  <div class="diag"></div>
-  <div class="scan"></div>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
-  <div class="particles">
-    <div class="p p1"></div><div class="p p2"></div><div class="p p3"></div>
-    <div class="p p4"></div><div class="p p5"></div><div class="p p6"></div>
-    <div class="p p7"></div>
-  </div>
-
-  <main class="page">
-
-    <!-- Quote strip — LINKED -->
-    <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="quote-strip">
-      <div class="qs-line"></div>
-      <div class="qs-txt">"Investing is Freedom, Banking is Slavery"</div>
-      <div class="qs-line"></div>
-    </a>
-
-    <!-- Logo — LINKED -->
-    <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="logo-link">
-      <div class="logo-section">
-        <div class="logo-outer">
-          <div class="lr1"></div>
-          <div class="lr2"></div>
-          <div class="l-img">
-            <img
-              src="https://onebyone.site/wp-content/uploads/2026/03/aman.jpg"
-              alt="Aman Gautam"
-              onerror="this.style.display='none';this.parentElement.style.background='#fff';this.parentElement.innerHTML='<span style=\'font-family:Italiana,serif;font-size:22px;color:#0d9488;font-weight:400\'>AG</span>'"
-            />
-          </div>
-          <div class="ldot ld1"></div>
-          <div class="ldot ld2"></div>
-          <div class="ldot ld3"></div>
-          <div class="ldot ld4"></div>
-        </div>
-        <div class="name-row">
-          <div class="nr-line"></div>
-          <span class="nr-txt">Aman Gautam</span>
-          <div class="nr-line r"></div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Title — LINKED -->
-    <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="title-link">
-      <div class="title-wrap">
-        <div class="pre-lbl">— Swing Trader · Investor —</div>
-        <h1><span class="a">AMAN</span> <span class="g">GAUTAM</span></h1>
-        <p class="tagline">
-          <span class="hi">Swing Trading</span> Expert · Market <span class="hi2">Analysis & Views</span> 📊<br/>
-          Investor Cum Trader — Smart Money Mindset
-        </p>
-      </div>
-    </a>
-
-    <!-- Stats — LINKED -->
-    <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="stats-link">
-      <div class="stats-row">
-        <div class="sc"><div class="sc-v">9.6K+</div><div class="sc-l">Members</div></div>
-        <div class="sc"><div class="sc-v g">SWING</div><div class="sc-l">Trading</div></div>
-        <div class="sc"><div class="sc-v w">FREE</div><div class="sc-l">To Join</div></div>
-      </div>
-    </a>
-
-    <!-- Pills — each LINKED -->
-    <div class="pills">
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="pill"><div class="pd t"></div>Swing Trading</a>
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="pill"><div class="pd t"></div>Stock Analysis</a>
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="pill"><div class="pd g"></div>Market Views</a>
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="pill"><div class="pd g"></div>Investor Calls</a>
+    <div class="timer">
+      <span id="countdown">5</span> SECONDS
     </div>
 
-    <!-- Live Ticker — each LINKED -->
-    <div class="ticker-row">
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="ti">
-        <div class="tdot g"></div><span class="tl">NIFTY</span>&nbsp;<span class="tv g">▲ 0.62%</span>
-      </a>
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="ti">
-        <div class="tdot r"></div><span class="tl">BANK</span>&nbsp;<span class="tv r">▼ 0.28%</span>
-      </a>
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="ti">
-        <div class="tdot g"></div><span class="tl">SENSEX</span>&nbsp;<span class="tv g">▲ 0.54%</span>
-      </a>
+    <div class="profile">
+      <img src="https://onebyone.site/wp-content/uploads/2026/03/aman.jpg" alt="Trading Logo" />
     </div>
 
-  
+    <h2>90,000 Subscribers</h2>
+    <p>✅ Turning Market Moves into Opportunities</p>
 
-    <!-- CTA — LINKED -->
-    <div class="cta-wrap">
-      <a href="https://telegram.openinapp.co/traan" target="_blank" rel="noopener" class="btn">
-        <span class="btn-inner">
-          <svg class="tg" viewBox="0 0 24 24" fill="none">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-2.04 9.608c-.15.673-.546.837-1.107.52l-3.062-2.255-1.478 1.423c-.164.164-.3.3-.615.3l.219-3.108 5.655-5.108c.246-.218-.053-.34-.38-.12L7.27 14.078l-3.013-.94c-.655-.204-.668-.655.137-.969l11.753-4.53c.546-.2 1.024.133.847.93l-.432-.5z"/>
-          </svg>
-          Join Aman Gautam — Free
-        </span>
-      </a>
-    </div>
+    <a href="https://telegram.openinapp.co/traan" class="view-btn">JOIN NOW FOR FREE</a>
 
+    <p class="footer">💎 Precision. Power. Passion 🌍 - Join Now</p>
   </main>
 
-  <p class="credit">Ads by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank" rel="noopener">@Nexgroww_agency</a></p>
+  <div class="credit">
+      Ads Managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9">@Nexgroww_agency</a>
+  </div>
+
+  <section class="disclaimer">
+    <strong>Disclaimer:</strong> All trading and game-related activities involve risk.
+    ARHAAN TRADERS provides information for educational and entertainment purposes only.
+    No guaranteed profits. Trade responsibly.
+  </section>
+
+  <div class="footer-links">
+    <a href="https://telegram.openinapp.co/traan">Privacy Policy</a>
+    <span>|</span>
+    <a href="https://telegram.openinapp.co/traan">Contact Us</a>
+  </div>
+
+  <script>
+    let countdown = 5;
+    function updateTimer() {
+      document.getElementById("countdown").innerText = countdown;
+      countdown--;
+    }
+  </script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
